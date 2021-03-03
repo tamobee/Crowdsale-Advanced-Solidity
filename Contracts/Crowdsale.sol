@@ -18,14 +18,14 @@ contract PupperCoinSale is Crowdsale, MintedCrowdsale, CappedCrowdsale, TimedCro
         uint rate,
         uint goal,
         uint cap,
-        uint open,
-        uint close,
+        uint openingTime,
+        uint closingTime,
         PupperCoin token
     )
         // @TODO: Pass the constructor parameters to the crowdsale contracts.
         Crowdsale(rate, wallet, token)
         CappedCrowdsale(cap)
-        TimedCrowdsale(open, close)
+        TimedCrowdsale(openingTime, closingTime)
         RefundableCrowdsale(goal)
         public
     {
