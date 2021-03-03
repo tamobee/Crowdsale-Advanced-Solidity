@@ -52,7 +52,7 @@ contract PupperCoinSaleDeployer {
         token_address = address(token);
 
         // @TODO: create the PupperCoinSale and tell it about the token, set the goal, and set the open and close times to now and now + 24 weeks.
-        PupperCoinSale token_sale = new PupperCoinSale(name, symbol, wallet, 1, 9000, 5000, now, now + 24 weeks, token);
+        PupperCoinSale token_sale = new PupperCoinSale(name, symbol, wallet, 1, 100, 300, now, now + 24 weeks, token);
         token_sale_address = address(token_sale);
 
         // make the PupperCoinSale contract a minter, then have the PupperCoinSaleDeployer renounce its minter role
